@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "971718575281",
+    "project_id": "ralk-ef10e",
+    "storage_bucket": "ralk-ef10e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:971718575281:android:3d202d96a3fa1906738e90",
+        "android_client_info": {
+          "package_name": "com.example.ralk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "971718575281-l7u97ucao71f7pfg2648a7533u4ipmjo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACCtQCuqXJ8GWSV135p_BMerPJKldj8GQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "971718575281-l7u97ucao71f7pfg2648a7533u4ipmjo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
