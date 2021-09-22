@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFC0C1C3">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="361dp"
+        android:layout_height="46dp"
+        android:text="@string/payments_received_today"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="274dp" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="188dp"
+        android:layout_height="45dp"
+        android:text="Weekly"
+        app:backgroundTint="#3A3838"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="691dp" />
+
+    <Button
+        android:id="@+id/button42"
+        android:layout_width="195dp"
+        android:layout_height="46dp"
+        android:text="Monthly"
+        app:backgroundTint="#3A3838"
+        tools:layout_editor_absoluteX="224dp"
+        tools:layout_editor_absoluteY="690dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="164dp"
+        android:layout_height="130dp"
+        app:srcCompat="@drawable/photo_1628705756212_jpg_auto_x2_591e9426_fad1_11eb_a561_16225aa77860"
+        tools:layout_editor_absoluteX="111dp"
+        tools:layout_editor_absoluteY="7dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Admin"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="40dp"
+        tools:layout_editor_absoluteX="132dp"
+        tools:layout_editor_absoluteY="149dp" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="110dp"
+        android:layout_height="45dp"
+        android:text="Orders"
+        app:backgroundTint="#3A3838"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="221dp" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="119dp"
+        android:layout_height="45dp"
+        android:text="Payments"
+        app:backgroundTint="#B80015"
+        app:iconTint="#FD0F0F"
+        app:rippleColor="#BD1414"
+        tools:layout_editor_absoluteX="114dp"
+        tools:layout_editor_absoluteY="221dp" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="195dp"
+        android:layout_height="46dp"
+        android:text="Employee Details"
+        app:backgroundTint="#3A3838"
+        tools:layout_editor_absoluteX="233dp"
+        tools:layout_editor_absoluteY="220dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

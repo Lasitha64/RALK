@@ -11,4 +11,45 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+
+
+    <string name="button">Button</string>
+    <string name="enter_phone_number">Enter Phone Number</string>
+    <string name="enter_e_mail_address">Enter E-mail Address</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="re_enter_password">Re-enter Password</string>
+    <string name="house_no">House No</string>
+    <string name="street_city"><![CDATA[Street & City]]></string>
+    <string name="enter_your_name">Enter Your Name</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="pm001">PM001</string>
+    <string name="a_r_perera">A.R Perera</string>
+    <string name="arperera_gmail_com">arperera@gmail.com</string>
+    <string name="pm003">PM003</string>
+    <string name="bdsilva_gmail_com">bdsilva@gmail.com</string>
+    <string name="_0729571178">0729571178</string>
+    <string name="delete">Delete</string>
+    <string name="b_d_silva">B.D Silva</string>
+    <string name="update">Update</string>
+    <string name="mobile_no">Mobile No</string>
+    <string name="name">Name</string>
+    <string name="delivery_partner">Delivery Partner</string>
+    <string name="product_manager">Product Manager</string>
+    <string name="admin">Admin</string>
+    <string name="orders">Orders</string>
+    <string name="payments">Payments</string>
+    <string name="employee_details">Employee Details</string>
+    <string name="e_mail">E-Mail</string>
+    <string name="pm002">PM002</string>
+    <string name="dp001">DP001</string>
+    <string name="dp002">DP002</string>
+    <string name="dp003">DP003</string>
+    <string name="add_a_new_delivery_partner">Add a New Delivery Partner</string>
+    <string name="default_password_ralkdp123">Default Password : Ralkdp123*</string>
+    <string name="payments_received_today">Payments Received Today</string>
+    <string name="payments_received_weekly">Payments Received Weekly</string>
+    <string name="monthly">Monthly</string>
+    <string name="weekly">Weekly</string>
+
+
 </resources>

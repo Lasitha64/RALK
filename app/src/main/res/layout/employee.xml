@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFC0C1C3">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pm001"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            tools:layout_editor_absoluteX="3dp"
+            tools:layout_editor_absoluteY="338dp" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/a_r_perera"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            tools:layout_editor_absoluteX="81dp"
+            tools:layout_editor_absoluteY="338dp" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/arperera_gmail_com"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            tools:layout_editor_absoluteX="159dp"
+            tools:layout_editor_absoluteY="338dp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pm003"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                tools:layout_editor_absoluteX="3dp"
+                tools:layout_editor_absoluteY="533dp" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bdsilva_gmail_com"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                tools:layout_editor_absoluteX="159dp"
+                tools:layout_editor_absoluteY="533dp" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_0729571178"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                tools:layout_editor_absoluteX="318dp"
+                tools:layout_editor_absoluteY="533dp" />
+
+            <Button
+                android:id="@+id/button31"
+                android:layout_width="123dp"
+                android:layout_height="37dp"
+                android:text="@string/delete"
+                app:backgroundTint="#4CAF50"
+                tools:layout_editor_absoluteX="81dp"
+                tools:layout_editor_absoluteY="573dp" />
+
+            <Button
+                android:id="@+id/button32"
+                android:layout_width="118dp"
+                android:layout_height="38dp"
+                android:text="@string/update"
+                app:backgroundTint="#3F51B5"
+                tools:layout_editor_absoluteX="220dp"
+                tools:layout_editor_absoluteY="573dp" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/b_d_silva"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                tools:layout_editor_absoluteX="81dp"
+                tools:layout_editor_absoluteY="533dp" />
+
+            <Button
+                android:id="@+id/button23"
+                android:layout_width="118dp"
+                android:layout_height="38dp"
+                android:text="@string/update"
+                app:backgroundTint="#3F51B5"
+                tools:layout_editor_absoluteX="220dp"
+                tools:layout_editor_absoluteY="477dp" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName7"
+                android:layout_width="122dp"
+                android:layout_height="41dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/mobile_no"
+                tools:layout_editor_absoluteX="290dp"
+                tools:layout_editor_absoluteY="281dp" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName5"
+                android:layout_width="99dp"
+                android:layout_height="39dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/name"
+                tools:layout_editor_absoluteX="81dp"
+                tools:layout_editor_absoluteY="284dp" />
+
+            <Button
+                android:id="@+id/button18"
+                android:layout_width="195dp"
+                android:layout_height="46dp"
+                android:background="#FFC0C1C3"
+                android:text="@string/delivery_partner"
+                app:backgroundTint="#3A3838"
+                tools:layout_editor_absoluteX="200dp"
+                tools:layout_editor_absoluteY="690dp" />
+
+            <Button
+                android:id="@+id/button17"
+                android:layout_width="195dp"
+                android:layout_height="46dp"
+                android:background="#FFC0C1C3"
+                android:text="@string/product_manager"
+                app:backgroundTint="#B80015"
+                tools:layout_editor_absoluteX="3dp"
+                tools:layout_editor_absoluteY="690dp" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="164dp"
+                android:layout_height="130dp"
+                app:srcCompat="@drawable/photo_1628705756212_jpg_auto_x2_591e9426_fad1_11eb_a561_16225aa77860"
+                tools:layout_editor_absoluteX="111dp"
+                tools:layout_editor_absoluteY="7dp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/admin"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="40dp"
+                tools:layout_editor_absoluteX="132dp"
+                tools:layout_editor_absoluteY="149dp" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="110dp"
+                android:layout_height="45dp"
+                android:text="@string/orders"
+                app:backgroundTint="#B80015"
+                tools:layout_editor_absoluteX="3dp"
+                tools:layout_editor_absoluteY="221dp" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="119dp"
+                android:layout_height="45dp"
+                android:text="@string/payments"
+                app:backgroundTint="#353535"
+                tools:layout_editor_absoluteX="114dp"
+                tools:layout_editor_absoluteY="221dp" />
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="195dp"
+                android:layout_height="46dp"
+                android:text="@string/employee_details"
+                app:backgroundTint="#3A3838"
+                tools:layout_editor_absoluteX="233dp"
+                tools:layout_editor_absoluteY="220dp" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName4"
+                style="@android:style/Widget.DeviceDefault.AutoCompleteTextView"
+                android:layout_width="78dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="ID"
+                tools:layout_editor_absoluteX="3dp"
+                tools:layout_editor_absoluteY="281dp" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName6"
+                android:layout_width="110dp"
+                android:layout_height="38dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/e_mail"
+                tools:layout_editor_absoluteX="180dp"
+                tools:layout_editor_absoluteY="285dp" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pm002"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                tools:layout_editor_absoluteX="3dp"
+                tools:layout_editor_absoluteY="437dp" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="S.R Pinto"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                tools:layout_editor_absoluteX="81dp"
+                tools:layout_editor_absoluteY="437dp" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="srpinto@gmail.com"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                tools:layout_editor_absoluteX="159dp"
+                tools:layout_editor_absoluteY="437dp" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0759875421"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                tools:layout_editor_absoluteX="318dp"
+                tools:layout_editor_absoluteY="437dp" />
+
+            <Button
+                android:id="@+id/button19"
+                android:layout_width="123dp"
+                android:layout_height="37dp"
+                android:text="Delete"
+                app:backgroundTint="#4CAF50"
+                tools:layout_editor_absoluteX="81dp"
+                tools:layout_editor_absoluteY="477dp" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0710794048"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                tools:layout_editor_absoluteX="318dp"
+                tools:layout_editor_absoluteY="340dp" />
+
+            <Button
+                android:id="@+id/button33"
+                android:layout_width="282dp"
+                android:layout_height="36dp"
+                android:text="Add a New Product Manager"
+                tools:layout_editor_absoluteX="127dp"
+                tools:layout_editor_absoluteY="654dp" />
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="222dp"
+                android:layout_height="22dp"
+                android:text="Default Password : Ralkpm123*"
+                android:textColor="@color/black"
+                tools:layout_editor_absoluteX="26dp"
+                tools:layout_editor_absoluteY="628dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/button29"
+            android:layout_width="118dp"
+            android:layout_height="38dp"
+            android:text="Update"
+            app:backgroundTint="#3F51B5"
+            tools:layout_editor_absoluteX="209dp"
+            tools:layout_editor_absoluteY="373dp" />
+
+        <Button
+            android:id="@+id/button30"
+            android:layout_width="123dp"
+            android:layout_height="37dp"
+            android:text="Delete"
+            app:backgroundTint="#4CAF50"
+            tools:layout_editor_absoluteX="75dp"
+            tools:layout_editor_absoluteY="374dp" />
+
+        <Button
+            android:id="@+id/button23"
+            android:layout_width="118dp"
+            android:layout_height="38dp"
+            android:text="Update"
+            app:backgroundTint="#3F51B5"
+            tools:layout_editor_absoluteX="209dp"
+            tools:layout_editor_absoluteY="373dp" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName7"
+            android:layout_width="122dp"
+            android:layout_height="41dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Mobile No"
+            tools:layout_editor_absoluteX="290dp"
+            tools:layout_editor_absoluteY="281dp" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName5"
+            android:layout_width="99dp"
+            android:layout_height="39dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name"
+            tools:layout_editor_absoluteX="81dp"
+            tools:layout_editor_absoluteY="284dp" />
+
+        <Button
+            android:id="@+id/button18"
+            android:layout_width="195dp"
+            android:layout_height="46dp"
+            android:text="Delivery Partner"
+            app:backgroundTint="#3A3838"
+            tools:layout_editor_absoluteX="200dp"
+            tools:layout_editor_absoluteY="690dp" />
+
+        <Button
+            android:id="@+id/button17"
+            android:layout_width="195dp"
+            android:layout_height="46dp"
+            android:text="Product Manager"
+            app:backgroundTint="#B80015"
+            tools:layout_editor_absoluteX="3dp"
+            tools:layout_editor_absoluteY="690dp" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="164dp"
+            android:layout_height="130dp"
+            app:srcCompat="@drawable/photo_1628705756212_jpg_auto_x2_591e9426_fad1_11eb_a561_16225aa77860"
+            tools:layout_editor_absoluteX="111dp"
+            tools:layout_editor_absoluteY="7dp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Admin"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="40dp"
+            tools:layout_editor_absoluteX="132dp"
+            tools:layout_editor_absoluteY="149dp" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:text="Orders"
+            app:backgroundTint="#B80015"
+            tools:layout_editor_absoluteX="3dp"
+            tools:layout_editor_absoluteY="221dp" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="119dp"
+            android:layout_height="45dp"
+            android:text="Payments"
+            app:backgroundTint="#353535"
+            tools:layout_editor_absoluteX="114dp"
+            tools:layout_editor_absoluteY="221dp" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="195dp"
+            android:layout_height="46dp"
+            android:text="Employee Details"
+            app:backgroundTint="#3A3838"
+            tools:layout_editor_absoluteX="233dp"
+            tools:layout_editor_absoluteY="220dp" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName4"
+            style="@android:style/Widget.DeviceDefault.AutoCompleteTextView"
+            android:layout_width="78dp"
+            android:layout_height="42dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="ID"
+            tools:layout_editor_absoluteX="3dp"
+            tools:layout_editor_absoluteY="281dp" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName6"
+            android:layout_width="110dp"
+            android:layout_height="38dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="E-Mail"
+            tools:layout_editor_absoluteX="180dp"
+            tools:layout_editor_absoluteY="285dp" />
+
+        <Button
+            android:id="@+id/button19"
+            android:layout_width="123dp"
+            android:layout_height="37dp"
+            android:text="Delete"
+            app:backgroundTint="#4CAF50"
+            tools:layout_editor_absoluteX="75dp"
+            tools:layout_editor_absoluteY="374dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="164dp"
+        android:layout_height="130dp"
+        app:srcCompat="@drawable/photo_1628705756212_jpg_auto_x2_591e9426_fad1_11eb_a561_16225aa77860"
+        tools:layout_editor_absoluteX="111dp"
+        tools:layout_editor_absoluteY="7dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Admin"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="40dp"
+        tools:layout_editor_absoluteX="132dp"
+        tools:layout_editor_absoluteY="149dp" />
+
+    <Button
+        android:id="@+id/button14"
+        android:layout_width="110dp"
+        android:layout_height="45dp"
+        android:text="Orders"
+        app:backgroundTint="#3A3838"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="221dp" />
+
+    <Button
+        android:id="@+id/button15"
+        android:layout_width="119dp"
+        android:layout_height="45dp"
+        android:text="Payments"
+        app:backgroundTint="#353535"
+        tools:layout_editor_absoluteX="114dp"
+        tools:layout_editor_absoluteY="221dp" />
+
+    <Button
+        android:id="@+id/button16"
+        android:layout_width="195dp"
+        android:layout_height="46dp"
+        android:text="Employee Details"
+        app:backgroundTint="#B80015"
+        tools:layout_editor_absoluteX="233dp"
+        tools:layout_editor_absoluteY="220dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
