@@ -12,6 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RALK" >
         <activity
+            android:name=".HomeActivity"
+            android:exported="true"
+            android:label="@string/title_activity_home"
+            android:theme="@style/Theme.RALK.NoActionBar" />
+        <activity
+            android:name=".Home"
+            android:exported="true"
+            android:label="@string/title_activity_home"
+            android:theme="@style/Theme.RALK.NoActionBar" />
+        <activity
             android:name=".cus.customerMainView"
             android:exported="true"
             android:label="@string/title_activity_customer_main_view"
