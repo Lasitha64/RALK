@@ -18,10 +18,9 @@
 
         <ImageView
             android:id="@+id/menu_image"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/ralklogo"
-            />
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ralklogo" />
 
         <TextView
             android:id="@+id/menu_text"
@@ -29,13 +28,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:text="Name of Menu"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:gravity="center"
+            android:gravity="right"
+            android:text="@string/name_of_menu"
             android:textColor="@color/browser_actions_title_color"
-         />
-
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="RtlHardcoded" />
 
 
     </RelativeLayout>

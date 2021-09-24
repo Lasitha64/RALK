@@ -11,18 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RALK" >
+ 
         <activity
-            android:name=".HomeActivity"
-            android:exported="true"
-            android:label="@string/title_activity_home"
-            android:theme="@style/Theme.RALK.NoActionBar" />
-        <activity
-            android:name=".Home"
-            android:exported="true"
-            android:label="@string/title_activity_home"
-            android:theme="@style/Theme.RALK.NoActionBar" />
-        <activity
-            android:name=".cus.customerMainView"
+            android:name=".cus.customer_main"
             android:exported="true"
             android:label="@string/title_activity_customer_main_view"
             android:theme="@style/Theme.RALK.NoActionBar" />

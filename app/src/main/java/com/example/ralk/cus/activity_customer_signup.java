@@ -54,7 +54,7 @@ public class activity_customer_signup extends AppCompatActivity {
         pbar = findViewById(R.id.progressBar2);
 
         if (mAuth.getCurrentUser() != null){
-            startActivity(new Intent(getApplicationContext(), customerMainView.class));
+            startActivity(new Intent(getApplicationContext(), customer_main.class));
 
         }
 

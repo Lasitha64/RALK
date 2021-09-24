@@ -76,7 +76,7 @@ public class activity_customer_login extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             Toast.makeText(activity_customer_login.this, "Logged in Successfully", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(), customerMainView.class));
+                            startActivity(new Intent(getApplicationContext(), customer_main.class));
                         } else {
                             Toast.makeText(activity_customer_login.this, "Error ! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                             pbar.setVisibility(View.GONE);

@@ -1,5 +1,6 @@
 package com.example.ralk;
 
+import android.media.Image;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.ralk.model.Category;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.squareup.picasso.Picasso;
 
 
 public class CustomerAdapter  extends FirebaseRecyclerAdapter<Category,CustomerAdapter.customerViewholder>{
@@ -24,7 +26,7 @@ public class CustomerAdapter  extends FirebaseRecyclerAdapter<Category,CustomerA
 
     @Override
     protected void onBindViewHolder(@NonNull CustomerAdapter.customerViewholder holder, int position, @NonNull Category model) {
-        holder.Image.setImageURI(Uri.parse(model.getImage().toString()));
+        Picasso.get().load(model.getImage()).into(holder.Image);
         holder.Name.setText(model.getName());
     }
 
@@ -46,6 +48,8 @@ public class CustomerAdapter  extends FirebaseRecyclerAdapter<Category,CustomerA
 
             Name = itemView.findViewById(R.id.menu_text);
             Image = itemView.findViewById(R.id.menu_image);
+
+            System.out.println(Name);
 
         }
     }
