@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         logindp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, LoginDeliveryManager.class));
+                startActivity(new Intent(MainActivity.this, delivery_manager_main.class));
             }
         });
 
