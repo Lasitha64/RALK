@@ -1,22 +1,28 @@
-package com.example.ralk.cus;
-
-import android.os.Bundle;
+package com.example.ralk;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.ralk.CustomerAdapter;
-import com.example.ralk.R;
+import android.os.Bundle;
+import android.util.Log;
+
 import com.example.ralk.model.Category;
+import com.example.ralk.model.Food;
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 
-public class customer_main extends AppCompatActivity {
 
-    CustomerAdapter adapter;
+public class food_list extends AppCompatActivity {
+
+    FoodAdapter adapter;
     DatabaseReference mbase;
+
+
+
 
 
 
@@ -24,30 +30,46 @@ public class customer_main extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_customer_main );
+        setContentView(R.layout.activity_food_list );
 
         // Create a instance of the database and get
         // its reference
-        mbase = FirebaseDatabase.getInstance("https://ralk-ef10e-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference("Category");
+        mbase = FirebaseDatabase.getInstance("https://ralk-ef10e-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference("Foods");
 
-        RecyclerView recyclerView = findViewById(R.id.recycler1);
+        RecyclerView recyclerView = findViewById(R.id.recycler_food);
 
         // To display the Recycler view linearly
         recyclerView.setLayoutManager(
                 new LinearLayoutManager(this));
 
+
+
         // It is a class provide by the FirebaseUI to make a
         // query in the database to fetch appropriate data
-        FirebaseRecyclerOptions<Category> options
-                = new FirebaseRecyclerOptions.Builder<Category>()
-                .setQuery(mbase, Category.class)
+
+        String categoryid = getIntent().getStringExtra("Categoryid");
+
+       // System.out.println(categoryid);
+
+        Query query = mbase.orderByChild("MenuId").equalTo(categoryid);
+
+        //System.out.println(query);
+
+        FirebaseRecyclerOptions<Food> options
+                = new FirebaseRecyclerOptions.Builder<Food>()
+                .setQuery(query,Food.class)
                 .build();
+
+        System.out.println(options);
         // Connecting object of required Adapter class to
         // the Adapter class itself
-        adapter = new CustomerAdapter(options);
+        adapter = new FoodAdapter(options);
         // Connecting Adapter class with the Recycler view*/
-        recyclerView.setAdapter(adapter);
+     //   Log.d("TAG",""+adapter.getItemCount());
+       recyclerView.setAdapter(adapter);
     }
+
+
 
     @Override protected void onStart()
     {
