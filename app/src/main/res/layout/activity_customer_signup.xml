@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".cus.activity_customer_signup">
 
+
+
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="100dp"
