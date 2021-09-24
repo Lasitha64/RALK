@@ -5,11 +5,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.util.Log;
 
-import com.example.ralk.model.Category;
+import com.example.ralk.adapter.FoodAdapter;
 import com.example.ralk.model.Food;
-import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -65,7 +63,7 @@ public class food_list extends AppCompatActivity {
         // the Adapter class itself
         adapter = new FoodAdapter(options);
         // Connecting Adapter class with the Recycler view*/
-     //   Log.d("TAG",""+adapter.getItemCount());
+        //   Log.d("TAG",""+adapter.getItemCount());
        recyclerView.setAdapter(adapter);
     }
 

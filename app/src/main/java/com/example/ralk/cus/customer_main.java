@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.ralk.CustomerAdapter;
+import com.example.ralk.adapter.CustomerAdapter;
 import com.example.ralk.R;
 import com.example.ralk.model.Category;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
