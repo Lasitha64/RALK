@@ -33,4 +33,7 @@ public class Deliverylist {
     public void setDctime(String dctime) {
         Dctime = dctime;
     }
+
+    public void add(Deliverylist deliverylist) {
+    }
 }

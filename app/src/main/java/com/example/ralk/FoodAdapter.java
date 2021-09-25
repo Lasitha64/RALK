@@ -31,6 +31,7 @@ public class FoodAdapter extends FirebaseRecyclerAdapter<Food,FoodAdapter.foodvi
     }
 
     @NonNull
+
     @Override
     public FoodAdapter.foodviewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view =  LayoutInflater.from(parent.getContext())
