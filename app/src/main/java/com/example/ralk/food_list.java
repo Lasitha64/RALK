@@ -4,13 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 
-import com.example.ralk.model.Category;
+import com.example.ralk.adapter.FoodAdapter;
 import com.example.ralk.model.Food;
-import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
@@ -35,6 +35,13 @@ public class food_list extends AppCompatActivity {
         // Create a instance of the database and get
         // its reference
         mbase = FirebaseDatabase.getInstance("https://ralk-ef10e-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference("Foods");
+
+
+//        FloatingActionButton fab = (FloatingActionButton)findViewById(R.id.fab);
+//        fab.setOnClickListener((view)->{
+//            Intent cartIntent = new Intent(food_list.this,cart.class);
+//        });
+
 
         RecyclerView recyclerView = findViewById(R.id.recycler_food);
 
@@ -65,7 +72,7 @@ public class food_list extends AppCompatActivity {
         // the Adapter class itself
         adapter = new FoodAdapter(options);
         // Connecting Adapter class with the Recycler view*/
-     //   Log.d("TAG",""+adapter.getItemCount());
+        //   Log.d("TAG",""+adapter.getItemCount());
        recyclerView.setAdapter(adapter);
     }
 
