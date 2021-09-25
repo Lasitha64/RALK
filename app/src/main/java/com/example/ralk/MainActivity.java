@@ -12,7 +12,7 @@ import com.example.ralk.cus.activity_customer_signup;
 
 public class MainActivity extends AppCompatActivity {
 
-     Button logindp,logincus,signup,loginp,loginad;
+     Button logindp,logincus,signup,loginp,loginad,loginpm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         logindp = findViewById(R.id.btn_logdp);
         logincus = findViewById(R.id.btn_logcus);
         signup = findViewById(R.id.btn_signup);
-        logindp = findViewById(R.id.btn_logdp);
+        loginpm = findViewById(R.id.btn_logpm);
         loginad = findViewById(R.id.btn_logAdmin);
 
         logindp.setOnClickListener(new View.OnClickListener() {
@@ -43,6 +43,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, activity_customer_signup.class));
+            }
+        });
+        loginpm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ProductManagerAddItem.class));
             }
         });
     }
