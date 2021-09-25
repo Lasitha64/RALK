@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RALK">
         <activity
+            android:name=".EnterCatagory"
+            android:exported="true" />
+        <activity
             android:name=".ProductManagerAddItem"
             android:exported="true" />
         <activity
