@@ -15,8 +15,23 @@
         <entry key="..\:/RALK/app/src/main/res/layout/fragment_slideshow.xml" value="0.275" />
         <entry key="..\:/RALK/app/src/main/res/layout/nav_header_customer_main_view.xml" value="0.275" />
         <entry key="..\:/Users/ravin/Documents/GitHub/RALK/app/src/main/res/layout/activity_customer_login.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/ravin/Documents/GitHub/RALK/app/src/main/res/layout/admin.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ravin/Documents/GitHub/RALK/app/src/main/res/layout/activity_customer_main_view.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ravin/Documents/GitHub/RALK/app/src/main/res/layout/activity_customer_signup.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ravin/Documents/GitHub/RALK/app/src/main/res/layout/activity_deliver_profile.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ravin/Documents/GitHub/RALK/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ravin/Documents/GitHub/RALK/app/src/main/res/layout/add_delivery.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ravin/Documents/GitHub/RALK/app/src/main/res/layout/admin.xml" value="0.264" />
+        <entry key="..\:/Users/ravin/Documents/GitHub/RALK/app/src/main/res/layout/admin_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ravin/Documents/GitHub/RALK/app/src/main/res/layout/adminlogin.xml" value="0.25025641025641027" />
+        <entry key="..\:/Users/ravin/Documents/GitHub/RALK/app/src/main/res/layout/aorder.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ravin/Documents/GitHub/RALK/app/src/main/res/layout/delivery.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ravin/Documents/GitHub/RALK/app/src/main/res/layout/ed.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ravin/Documents/GitHub/RALK/app/src/main/res/layout/employee.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ravin/Documents/GitHub/RALK/app/src/main/res/layout/fragment_gallery.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ravin/Documents/GitHub/RALK/app/src/main/res/layout/fragment_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ravin/Documents/GitHub/RALK/app/src/main/res/layout/menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ravin/Documents/GitHub/RALK/app/src/main/res/layout/nav_header_customer_main_view.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ravin/Documents/GitHub/RALK/app/src/main/res/layout/payment.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>

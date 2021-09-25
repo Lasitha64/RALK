@@ -6,43 +6,6 @@
     android:layout_height="match_parent"
     android:background="#FFC0C1C3">
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="361dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="370dp"
-        android:text="@string/payments_received_today"
-        android:textColor="@color/black"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/button42"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
-
-    <Button
-        android:id="@+id/button11"
-        android:layout_width="188dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="366dp"
-        android:text="Weekly"
-        app:backgroundTint="#3A3838"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button42"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-    <Button
-        android:id="@+id/button42"
-        android:layout_width="195dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="370dp"
-        android:text="Monthly"
-        app:backgroundTint="#3A3838"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="164dp"
@@ -86,11 +49,9 @@
         android:layout_height="48dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="19dp"
-        android:layout_marginBottom="8dp"
         android:text="Payments"
-        app:backgroundTint="#B80015"
+        app:backgroundTint="#3A3838"
         app:iconTint="#FD0F0F"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintEnd_toStartOf="@+id/button7"
         app:layout_constraintStart_toEndOf="@+id/button5"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
@@ -102,12 +63,53 @@
         android:layout_height="48dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="18dp"
-        android:layout_marginBottom="11dp"
         android:text="Employee Details"
-        app:backgroundTint="#3A3838"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:backgroundTint="#DD1717"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button6"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="166dp"
+        android:layout_height="143dp"
+        android:layout_marginStart="111dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="128dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button6"
+        app:srcCompat="@drawable/deli" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="245dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="8dp"
+        android:text="Delivery Partners"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
+
+    <Button
+        android:id="@+id/button25"
+        android:layout_width="260dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="228dp"
+        android:text="Product Managers"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="165dp"
+        android:layout_height="158dp"
+        android:layout_marginStart="111dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button25"
+        app:srcCompat="@drawable/poooood" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

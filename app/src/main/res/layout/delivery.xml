@@ -7,332 +7,73 @@
     android:background="#FFC0C1C3">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="101dp"
         tools:layout_editor_absoluteY="7dp">
 
-        <TextView
-            android:id="@+id/textView31"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/dp001"
-            android:textColor="@color/black"
-            android:textSize="16dp"
-            tools:layout_editor_absoluteX="3dp"
-            tools:layout_editor_absoluteY="340dp" />
-
-        <TextView
-            android:id="@+id/textView33"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="samanp@gmail.com"
-            android:textColor="@color/black"
-            android:textSize="16dp"
-            tools:layout_editor_absoluteX="159dp"
-            tools:layout_editor_absoluteY="340dp" />
-
-        <TextView
-            android:id="@+id/textView32"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="P.Saman "
-            android:textColor="@color/black"
-            android:textSize="16dp"
-            tools:layout_editor_absoluteX="81dp"
-            tools:layout_editor_absoluteY="340dp" />
-
-        <EditText
-            android:id="@+id/editTextTextPersonName8"
-            style="@android:style/Widget.DeviceDefault.AutoCompleteTextView"
-            android:layout_width="78dp"
-            android:layout_height="42dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="ID"
-            tools:layout_editor_absoluteX="3dp"
-            tools:layout_editor_absoluteY="281dp" />
-
-        <EditText
-            android:id="@+id/editTextTextPersonName9"
-            android:layout_width="99dp"
-            android:layout_height="39dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name"
-            tools:layout_editor_absoluteX="81dp"
-            tools:layout_editor_absoluteY="284dp" />
-
-        <EditText
-            android:id="@+id/editTextTextPersonName10"
-            android:layout_width="110dp"
-            android:layout_height="38dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="E-Mail"
-            tools:layout_editor_absoluteX="180dp"
-            tools:layout_editor_absoluteY="285dp" />
-
-        <EditText
-            android:id="@+id/editTextTextPersonName11"
-            android:layout_width="122dp"
-            android:layout_height="41dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Mobile No"
-            tools:layout_editor_absoluteX="290dp"
-            tools:layout_editor_absoluteY="281dp" />
-
-        <TextView
-            android:id="@+id/textView12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0710894948"
-            android:textColor="@color/black"
-            android:textSize="16dp"
-            tools:layout_editor_absoluteX="318dp"
-            tools:layout_editor_absoluteY="340dp" />
-
-        <Button
-            android:id="@+id/button27"
-            android:layout_width="123dp"
-            android:layout_height="37dp"
-            android:text="Delete"
-            app:backgroundTint="#4CAF50"
-            tools:layout_editor_absoluteX="75dp"
-            tools:layout_editor_absoluteY="374dp" />
-
-        <TextView
-            android:id="@+id/textView13"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/dp002"
-            android:textColor="@color/black"
-            android:textSize="16dp"
-            tools:layout_editor_absoluteX="3dp"
-            tools:layout_editor_absoluteY="437dp" />
-
-        <TextView
-            android:id="@+id/textView14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="G.Nimal"
-            android:textColor="@color/black"
-            android:textSize="16dp"
-            tools:layout_editor_absoluteX="81dp"
-            tools:layout_editor_absoluteY="437dp" />
-
-        <TextView
-            android:id="@+id/textView15"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="nimalg@gmail.com"
-            android:textColor="@color/black"
-            android:textSize="16dp"
-            tools:layout_editor_absoluteX="159dp"
-            tools:layout_editor_absoluteY="437dp" />
-
-        <TextView
-            android:id="@+id/textView16"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0769879123"
-            android:textColor="@color/black"
-            android:textSize="16dp"
-            tools:layout_editor_absoluteX="318dp"
-            tools:layout_editor_absoluteY="437dp" />
-
-        <Button
-            android:id="@+id/button28"
-            android:layout_width="118dp"
-            android:layout_height="38dp"
-            android:text="Update"
-            app:backgroundTint="#3F51B5"
-            tools:layout_editor_absoluteX="220dp"
-            tools:layout_editor_absoluteY="373dp" />
-
-        <Button
-            android:id="@+id/button38"
-            android:layout_width="118dp"
-            android:layout_height="38dp"
-            android:text="Update"
-            app:backgroundTint="#3F51B5"
-            tools:layout_editor_absoluteX="220dp"
-            tools:layout_editor_absoluteY="477dp" />
-
-        <Button
-            android:id="@+id/button34"
-            android:layout_width="123dp"
-            android:layout_height="37dp"
-            android:text="Delete"
-            app:backgroundTint="#4CAF50"
-            tools:layout_editor_absoluteX="81dp"
-            tools:layout_editor_absoluteY="477dp" />
-
-        <TextView
-            android:id="@+id/textView26"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/dp003"
-            android:textColor="@color/black"
-            android:textSize="16dp"
-            tools:layout_editor_absoluteX="3dp"
-            tools:layout_editor_absoluteY="533dp" />
-
-        <TextView
-            android:id="@+id/textView27"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="D.Malan"
-            android:textColor="@color/black"
-            android:textSize="16dp"
-            tools:layout_editor_absoluteX="81dp"
-            tools:layout_editor_absoluteY="533dp" />
-
-        <TextView
-            android:id="@+id/textView28"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="maland@gmail.com"
-            android:textColor="@color/black"
-            android:textSize="16dp"
-            tools:layout_editor_absoluteX="159dp"
-            tools:layout_editor_absoluteY="533dp" />
-
-        <TextView
-            android:id="@+id/textView29"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0789914382"
-            android:textColor="@color/black"
-            android:textSize="16dp"
-            tools:layout_editor_absoluteX="318dp"
-            tools:layout_editor_absoluteY="533dp" />
-
-        <Button
-            android:id="@+id/button35"
-            android:layout_width="118dp"
-            android:layout_height="38dp"
-            android:text="Update"
-            app:backgroundTint="#3F51B5"
-            tools:layout_editor_absoluteX="220dp"
-            tools:layout_editor_absoluteY="573dp" />
-
-        <Button
-            android:id="@+id/button36"
-            android:layout_width="123dp"
-            android:layout_height="37dp"
-            android:text="Delete"
-            app:backgroundTint="#4CAF50"
-            tools:layout_editor_absoluteX="81dp"
-            tools:layout_editor_absoluteY="573dp" />
-
-        <TextView
-            android:id="@+id/textView30"
-            android:layout_width="222dp"
-            android:layout_height="22dp"
-            android:text="@string/default_password_ralkdp123"
-            android:textColor="@color/black"
-            tools:layout_editor_absoluteX="26dp"
-            tools:layout_editor_absoluteY="628dp" />
-
         <Button
             android:id="@+id/button37"
             android:layout_width="282dp"
-            android:layout_height="36dp"
-            android:text="@string/add_a_new_delivery_partner"
-            tools:layout_editor_absoluteX="127dp"
-            tools:layout_editor_absoluteY="654dp" />
-
-        <Button
-            android:id="@+id/button25"
-            android:layout_width="195dp"
-            android:layout_height="46dp"
-            android:text="@string/delivery_partner"
-            app:backgroundTint="#B80015"
-            tools:layout_editor_absoluteX="214dp"
-            tools:layout_editor_absoluteY="690dp" />
-
-        <Button
-            android:id="@+id/button26"
-            android:layout_width="195dp"
-            android:layout_height="46dp"
-            android:text="Employee Details"
-            app:backgroundTint="#B80015"
-            tools:layout_editor_absoluteX="233dp"
-            tools:layout_editor_absoluteY="221dp" />
-
-        <Button
-            android:id="@+id/button24"
-            android:layout_width="212dp"
             android:layout_height="48dp"
-            android:text="@string/product_manager"
-            app:backgroundTint="#353535"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="688dp" />
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="2dp"
+            android:text="@string/add_a_new_delivery_partner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.411"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="643dp" />
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="164dp"
             android:layout_height="130dp"
-            app:srcCompat="@drawable/photo_1628705756212_jpg_auto_x2_591e9426_fad1_11eb_a561_16225aa77860"
-            tools:layout_editor_absoluteX="111dp"
-            tools:layout_editor_absoluteY="7dp" />
+            android:layout_marginStart="111dp"
+            android:layout_marginTop="7dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/photo_1628705756212_jpg_auto_x2_591e9426_fad1_11eb_a561_16225aa77860" />
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="110dp"
-            android:layout_height="45dp"
-            android:text="Orders"
-            app:backgroundTint="#3A3838"
-            tools:layout_editor_absoluteX="3dp"
-            tools:layout_editor_absoluteY="221dp" />
-
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="119dp"
-            android:layout_height="45dp"
-            android:text="Payments"
-            app:backgroundTint="#353535"
-            tools:layout_editor_absoluteX="114dp"
-            tools:layout_editor_absoluteY="221dp" />
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="129dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="125dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="157dp"
+            android:text="Admin"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Admin"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="40dp"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="149dp" />
 
     <Button
         android:id="@+id/button21"
         android:layout_width="110dp"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="295dp"
         android:text="Orders"
         app:backgroundTint="#353535"
-        tools:layout_editor_absoluteX="6dp"
-        tools:layout_editor_absoluteY="221dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
     <Button
         android:id="@+id/button22"
         android:layout_width="119dp"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="117dp"
+        android:layout_marginTop="221dp"
         android:text="Payments"
         app:backgroundTint="#353535"
-        tools:layout_editor_absoluteX="117dp"
-        tools:layout_editor_absoluteY="221dp" />
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="164dp"
-        android:layout_height="130dp"
-        app:srcCompat="@drawable/photo_1628705756212_jpg_auto_x2_591e9426_fad1_11eb_a561_16225aa77860"
-        tools:layout_editor_absoluteX="114dp"
-        tools:layout_editor_absoluteY="7dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

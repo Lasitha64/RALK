@@ -45,5 +45,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, activity_customer_signup.class));
             }
         });
+
+        loginad.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, adminlogin.class));
+            }
+        });
     }
 }

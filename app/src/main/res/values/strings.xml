@@ -50,6 +50,11 @@
     <string name="payments_received_weekly">Payments Received Weekly</string>
     <string name="monthly">Monthly</string>
     <string name="weekly">Weekly</string>
+    <string name="orderid">OrderID</string>
+    <string name="cusname">CusName</string>
+    <string name="address">Address</string>
+    <string name="dp_id">DP_ID</string>
+    <string name="Price">Price</string>
 
 
 </resources>
