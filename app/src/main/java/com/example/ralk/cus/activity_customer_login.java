@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.ralk.R;
+import com.example.ralk.common.Common;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -77,6 +78,7 @@ public class activity_customer_login extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             Toast.makeText(activity_customer_login.this, "Logged in Successfully", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(), customer_main.class));
+
                         } else {
                             Toast.makeText(activity_customer_login.this, "Error ! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                             pbar.setVisibility(View.GONE);
