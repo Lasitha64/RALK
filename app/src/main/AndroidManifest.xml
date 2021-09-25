@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.ralk">
+    package="com.example.ralk" >
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -10,7 +10,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.RALK">
+        android:theme="@style/Theme.RALK" >
+        <activity
+            android:name=".NavActivity"
+            android:exported="true"
+            android:label="@string/title_activity_nav_main"
+            android:theme="@style/Theme.RALK.NoActionBar" />
         <activity
             android:name=".cart"
             android:exported="true" />
@@ -27,7 +32,8 @@
         <activity android:name=".deliver_profile" />
         <activity android:name=".LoginDeliveryManager" />
         <activity android:name=".FoodDetails" />
-        <activity android:name=".MainActivity">
+
+        <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
