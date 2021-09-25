@@ -29,6 +29,7 @@
             android:theme="@style/Theme.RALK.NoActionBar" />
         <activity android:name=".cus.activity_customer_login" />
         <activity android:name=".cus.activity_customer_signup" />
+        <activity android:name=".delivery_manager_main" />
         <activity android:name=".deliver_profile" />
         <activity android:name=".LoginDeliveryManager" />
         <activity android:name=".FoodDetails" />
