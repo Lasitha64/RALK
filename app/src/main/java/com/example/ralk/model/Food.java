@@ -1,9 +1,13 @@
 package com.example.ralk.model;
 
 public class Food {
-          private String Name,Description, Price ,MenuId,Image;
+    private String Name;
+    private String Description;
+    private String Price;
+    private Integer MenuId;
+    private String Image;
 
-    public Food(String name, String description, String price, String menuId, String image) {
+    public Food(String name, String description, String price, Integer menuId, String image) {
         Name = name;
         Description = description;
         Price = price;
@@ -46,11 +50,11 @@ public class Food {
         Price = price;
     }
 
-    public String getMenuId() {
+    public Integer getMenuId() {
         return MenuId;
     }
 
-    public void setMenuId(String menuId) {
+    public void setMenuId(Integer menuId) {
         MenuId = menuId;
     }
 }
