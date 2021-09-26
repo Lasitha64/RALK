@@ -7,9 +7,11 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.ralk.model.updateDelivery;
+
 public class delivery extends AppCompatActivity {
 
-    Button button37;
+    Button button37,button14;
 
 
     @Override
@@ -23,6 +25,15 @@ public class delivery extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(delivery.this, add_delivery.class));
+            }
+        });
+
+        button14 = findViewById(R.id.button14);
+
+        button14.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(delivery.this, updateDelivery.class));
             }
         });
 

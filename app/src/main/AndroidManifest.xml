@@ -24,6 +24,7 @@
         <activity android:name=".add_delivery"/>
         <activity android:name=".delivery"/>
         <activity android:name=".empDetails"/>
+        <activity android:name=".model.updateDelivery"/>
 
 
         <activity android:name=".aorderadapter"

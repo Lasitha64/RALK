@@ -6,115 +6,106 @@
     android:layout_height="match_parent"
     android:background="#FFC0C1C3">
 
-    <Button
-        android:id="@+id/button40"
-        android:layout_width="119dp"
-        android:layout_height="45dp"
-        android:text="Payments"
-        app:backgroundTint="#353535"
-        tools:layout_editor_absoluteX="114dp"
-        tools:layout_editor_absoluteY="221dp" />
-
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="164dp"
         android:layout_height="130dp"
-        app:srcCompat="@drawable/photo_1628705756212_jpg_auto_x2_591e9426_fad1_11eb_a561_16225aa77860"
-        tools:layout_editor_absoluteX="111dp"
-        tools:layout_editor_absoluteY="7dp" />
+        android:layout_marginStart="111dp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/photo_1628705756212_jpg_auto_x2_591e9426_fad1_11eb_a561_16225aa77860" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Admin"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="9dp"
+        android:text="Delivery Partners"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="40dp"
-        tools:layout_editor_absoluteX="132dp"
-        tools:layout_editor_absoluteY="149dp" />
-
-    <Button
-        android:id="@+id/button12"
-        android:layout_width="110dp"
-        android:layout_height="45dp"
-        android:text="Orders"
-        app:backgroundTint="#3A3838"
-        tools:layout_editor_absoluteX="3dp"
-        tools:layout_editor_absoluteY="221dp" />
-
-    <Button
-        android:id="@+id/button13"
-        android:layout_width="195dp"
-        android:layout_height="46dp"
-        android:text="Employee Details"
-        app:backgroundTint="#B80015"
-        tools:layout_editor_absoluteX="233dp"
-        tools:layout_editor_absoluteY="221dp" />
-
-    <Button
-        android:id="@+id/button20"
-        android:layout_width="212dp"
-        android:layout_height="48dp"
-        android:text="@string/product_manager"
-        app:backgroundTint="#353535"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="688dp" />
-
-    <Button
-        android:id="@+id/button39"
-        android:layout_width="195dp"
-        android:layout_height="46dp"
-        android:text="@string/delivery_partner"
-        app:backgroundTint="#B80015"
-        tools:layout_editor_absoluteX="214dp"
-        tools:layout_editor_absoluteY="690dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <TextView
         android:id="@+id/textView34"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Update"
+        android:layout_marginStart="109dp"
+        android:layout_marginTop="28dp"
+        android:text="Update/Delete"
         android:textColor="@color/black"
         android:textSize="30dp"
-        tools:layout_editor_absoluteX="145dp"
-        tools:layout_editor_absoluteY="279dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <EditText
         android:id="@+id/editTextTextPersonName12"
         android:layout_width="364dp"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="26dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
-        tools:layout_editor_absoluteX="23dp"
-        tools:layout_editor_absoluteY="344dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="364dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="23dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Delivery Partner ID"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView34" />
 
     <EditText
         android:id="@+id/editTextTextPersonName13"
         android:layout_width="362dp"
         android:layout_height="48dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="32dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="E-mail"
-        tools:layout_editor_absoluteX="23dp"
-        tools:layout_editor_absoluteY="420dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName12" />
 
     <EditText
         android:id="@+id/editTextTextPersonName14"
         android:layout_width="364dp"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="40dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Phone Number"
-        tools:layout_editor_absoluteX="23dp"
-        tools:layout_editor_absoluteY="508dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName13" />
 
     <Button
         android:id="@+id/button41"
         android:layout_width="130dp"
-        android:layout_height="47dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="62dp"
         android:text="Update"
-        tools:layout_editor_absoluteX="130dp"
-        tools:layout_editor_absoluteY="582dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName14" />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="107dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="62dp"
+        android:text="DELETE"
+        app:layout_constraintStart_toEndOf="@+id/button41"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName14" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
