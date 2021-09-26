@@ -14,20 +14,16 @@
         <entry key="..\:/RALK/app/src/main/res/layout/fragment_home.xml" value="0.275" />
         <entry key="..\:/RALK/app/src/main/res/layout/fragment_slideshow.xml" value="0.275" />
         <entry key="..\:/RALK/app/src/main/res/layout/nav_header_customer_main_view.xml" value="0.275" />
-        <entry key="..\:/Users/Adithya Bandara/Documents/GitHub/RALK/app/src/main/res/layout/activity_cart.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/Adithya Bandara/Documents/GitHub/RALK/app/src/main/res/layout/activity_customer_login.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Adithya Bandara/Documents/GitHub/RALK/app/src/main/res/layout/activity_customer_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Adithya Bandara/Documents/GitHub/RALK/app/src/main/res/layout/activity_customer_signup.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Adithya Bandara/Documents/GitHub/RALK/app/src/main/res/layout/activity_deliver_profile.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Adithya Bandara/Documents/GitHub/RALK/app/src/main/res/layout/activity_food_item.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Adithya Bandara/Documents/GitHub/RALK/app/src/main/res/layout/activity_food_list.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Adithya Bandara/Documents/GitHub/RALK/app/src/main/res/layout/activity_login_delivery_manager.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Adithya Bandara/Documents/GitHub/RALK/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Adithya Bandara/Documents/GitHub/RALK/app/src/main/res/layout/cart_layout.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/Adithya Bandara/Documents/GitHub/RALK/app/src/main/res/layout/category_list.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Adithya Bandara/Documents/GitHub/RALK/app/src/main/res/layout/delivery_list.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Adithya Bandara/Documents/GitHub/RALK/app/src/main/res/layout/delivery_manager_main.xml" value="0.264" />
-        <entry key="..\:/Users/Adithya Bandara/Documents/GitHub/RALK/app/src/main/res/layout/delivery_retrive.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/DELL/Documents/GitHub/RALK/app/src/main/res/drawable/add_new_image.xml" value="0.2703125" />
+        <entry key="..\:/Users/DELL/Documents/GitHub/RALK/app/src/main/res/layout/activity_product_manager_main_page.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>
