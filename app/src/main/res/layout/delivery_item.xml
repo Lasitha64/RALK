@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="6dp"
+    android:elevation="6dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+
+     <TextView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:id="@+id/orderno"
+         android:text="Order No"
+         android:textStyle="bold"
+         android:textSize="19sp"
+         android:textColor="#000"
+
+
+         ></TextView>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/dpname"
+            android:text="DP Name"
+            android:layout_marginLeft="120sp"
+            android:textSize="19sp"
+            android:textColor="#000"
+
+
+            ></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/dctime"
+            android:text="DC Time"
+            android:layout_marginLeft="250sp"
+            android:textSize="19sp"
+            android:textColor="#000"
+
+
+            ></TextView>
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

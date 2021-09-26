@@ -1,6 +1,7 @@
 package com.example.ralk;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -25,7 +26,7 @@ import java.util.Objects;
 public class delivery_manager_main extends AppCompatActivity {
 
     EditText orderno,dpname,dctime;
-    Button button2,button3;
+    Button button2,button3,btViewList;
     DatabaseReference reff;
     Deliverylist deliverylist;
 
@@ -39,6 +40,7 @@ public class delivery_manager_main extends AppCompatActivity {
         dctime=(EditText) findViewById(R.id.dctime);
         button2=(Button) findViewById(R.id.button2);
         button3=(Button) findViewById(R.id.button3);
+        btViewList = (Button) findViewById(R.id.btViewList);
 
         deliverylist=new Deliverylist();
 
@@ -81,7 +83,15 @@ public class delivery_manager_main extends AppCompatActivity {
             }
         });
 
+        btViewList.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
 
+                Intent viewListIntent = new Intent(delivery_manager_main.this,
+                        Delivery_manager_retrive.class);
+                startActivity(viewListIntent);
+             }
+        });
 
     }
 

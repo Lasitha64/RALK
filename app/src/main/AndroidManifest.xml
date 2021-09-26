@@ -33,6 +33,7 @@
         <activity android:name=".deliver_profile" />
         <activity android:name=".LoginDeliveryManager" />
         <activity android:name=".FoodDetails" />
+        <activity android:name=".Delivery_manager_retrive" />
 
         <activity android:name=".MainActivity" >
             <intent-filter>
