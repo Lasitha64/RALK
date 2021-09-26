@@ -22,6 +22,7 @@
         <activity
             android:name=".cart"
             android:exported="true" />
+
         <activity
             android:name=".food_list"
             android:exported="true" />
