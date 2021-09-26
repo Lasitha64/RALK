@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFC0C1C3">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="101dp"
+        tools:layout_editor_absoluteY="7dp">
+
+        <Button
+            android:id="@+id/button37"
+            android:layout_width="220dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="436dp"
+            android:text="@string/add_a_new_delivery_partner"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="164dp"
+            android:layout_height="130dp"
+            android:layout_marginStart="111dp"
+            android:layout_marginTop="7dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/photo_1628705756212_jpg_auto_x2_591e9426_fad1_11eb_a561_16225aa77860" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="325dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="125dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="157dp"
+            android:text="Delivery Partners"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.418"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <Button
+            android:id="@+id/button14"
+            android:layout_width="131dp"
+            android:layout_height="58dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="436dp"
+            android:text="Update/Delete"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/button21"
+        android:layout_width="110dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="295dp"
+        android:text="Orders"
+        app:backgroundTint="#353535"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <Button
+        android:id="@+id/button22"
+        android:layout_width="119dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="117dp"
+        android:layout_marginTop="221dp"
+        android:text="Payments"
+        app:backgroundTint="#353535"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
