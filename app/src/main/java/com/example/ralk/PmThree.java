@@ -23,10 +23,20 @@ public class PmThree extends AppCompatActivity {
     DatabaseReference reff;
     com.example.ralk.model.Food Food;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pm_three);
+
+        getCount();
+        ProductManagerAddItem_name_of_the_food=(EditText)findViewById(R.id.ProductManagerAddItem_name_of_the_food);
+        ProductManagerAddItem_menu_ID=(EditText) findViewById(R.id.ProductManagerAddItem_menu_ID);
+        ProductManagerAddItem_Discription=(EditText) findViewById(R.id.ProductManagerAddItem_Discription);
+        ProductManagerAddItem_Prise=(EditText) findViewById(R.id.ProductManagerAddItem_Prise);
+        button3=(Button) findViewById(R.id.button3);
+        button4=(Button) findViewById(R.id.button4);
+        button5=(Button) findViewById(R.id.button5);
 
         Food=new Food();
 
@@ -58,17 +68,14 @@ public class PmThree extends AppCompatActivity {
         });
 
 
-        button4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                int menuId=Integer.parseInt(ProductManagerAddItem_menu_ID.getText().toString().trim());
-                Food.setPrice(ProductManagerAddItem_Prise.getText().toString());
-                Food.setDescription(ProductManagerAddItem_Discription.getText().toString());
-                Food.setName(ProductManagerAddItem_name_of_the_food.getText().toString());
-                Food.setMenuId(menuId);
+        button4.setOnClickListener(view -> {
+            int menuId=Integer.parseInt(ProductManagerAddItem_menu_ID.getText().toString().trim());
+            Food.setPrice(ProductManagerAddItem_Prise.getText().toString());
+            Food.setDescription(ProductManagerAddItem_Discription.getText().toString());
+            Food.setName(ProductManagerAddItem_name_of_the_food.getText().toString());
+            Food.setMenuId(menuId);
 
 
-            }
         });
     }
 
@@ -94,6 +101,11 @@ public class PmThree extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
+
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+//
+//            }
         });
 
     }
