@@ -39,17 +39,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        logpm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, activity_product_manager_main_page.class));
-            }
-        });
-
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, activity_customer_signup.class));
+            }
+        });
+
+        logpm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, pm_second.class));
             }
         });
     }
