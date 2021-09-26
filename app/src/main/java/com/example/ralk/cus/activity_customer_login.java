@@ -14,16 +14,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.ralk.R;
 import com.example.ralk.common.Common;
+import com.example.ralk.model.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class activity_customer_login extends AppCompatActivity {
 
     EditText etemail, etpass;
     Button bsignup, blogin;
     FirebaseAuth fAuth;
+    FirebaseUser user;
     ProgressBar pbar;
 
 
@@ -76,6 +79,10 @@ public class activity_customer_login extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+
+                            user = FirebaseAuth.getInstance().getCurrentUser();
+
+
                             Toast.makeText(activity_customer_login.this, "Logged in Successfully", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(), customer_main.class));
 

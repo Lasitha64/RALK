@@ -106,7 +106,7 @@ public class cart extends AppCompatActivity {
                 String phone = userprofile.getPhone();
                 String name = userprofile.getName();
 
-                Common common = new Common(name,phone);
+              //  Common common = new Common(name,phone);
             }
 
             @Override

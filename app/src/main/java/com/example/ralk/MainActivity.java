@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.ralk.admin.adminMain;
 import com.example.ralk.cus.activity_customer_login;
 import com.example.ralk.cus.activity_customer_signup;
 
@@ -36,6 +37,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, activity_customer_login.class));
+            }
+        });
+
+        loginad.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, adminMain.class));
             }
         });
 
