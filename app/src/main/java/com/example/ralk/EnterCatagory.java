@@ -1,9 +1,9 @@
 package com.example.ralk;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.ralk.databinding.ActivityMainBinding;
 
@@ -19,8 +19,5 @@ public class EnterCatagory extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         setContentView(R.layout.activity_enter_catagory);
-
-
-        binding.imageNewView.se
     }
 }
