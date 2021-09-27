@@ -1,11 +1,18 @@
 package com.example.ralk.model;
 
+import com.google.firebase.database.Exclude;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class Food {
     private String Name;
     private String Description;
     private String Price;
     private Integer MenuId;
     private String Image;
+
+    public Map<String, Boolean> stars = new HashMap<>();
 
     public Food(String name, String description, String price, Integer menuId, String image) {
         Name = name;
@@ -56,5 +63,16 @@ public class Food {
 
     public void setMenuId(Integer menuId) {
         MenuId = menuId;
+    }
+
+    @Exclude
+    public Map<String, Object> toMap() {
+        HashMap<String, Object> result = new HashMap<>();
+        result.put("name", Name);
+        result.put("description", Description);
+        result.put("menuId", MenuId);
+        result.put("price", Price);
+
+        return result;
     }
 }
