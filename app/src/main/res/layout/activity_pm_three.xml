@@ -101,6 +101,7 @@
         android:layout_width="113dp"
         android:layout_height="48dp"
         android:layout_marginEnd="28dp"
+        android:onClick="savenewProduct"
         android:text="Save"
         app:layout_constraintBottom_toBottomOf="@+id/button4"
         app:layout_constraintEnd_toStartOf="@+id/button4"

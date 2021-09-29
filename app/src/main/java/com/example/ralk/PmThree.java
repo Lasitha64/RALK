@@ -1,132 +1,154 @@
 package com.example.ralk;
 
 
+import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
-import com.example.ralk.model.Food;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+import com.example.ralk.database.DBHelper;
+import com.theartofdev.edmodo.cropper.CropImage;
+import com.theartofdev.edmodo.cropper.CropImageView;
+
+import java.io.ByteArrayOutputStream;
+
 public class PmThree extends AppCompatActivity {
+    public final static int PICK_IMAGE_REQUEST = 999;
 
-    //Initialising the variables of text field
-    EditText ProductManagerAddItem_name_of_the_food,ProductManagerAddItem_menu_ID,ProductManagerAddItem_Discription,ProductManagerAddItem_Prise;
+//   //Initialising the variables of text field
+//   EditText ProductManagerAddItem_name_of_the_food,ProductManagerAddItem_menu_ID,ProductManagerAddItem_Discription,ProductManagerAddItem_Prise;
+//    //Initialising the variables of buttons
+//    Button button3,button4,button5;
+//    //Initialising the database reference
+//    DatabaseReference reff;
+//    //Giving the path of the parent class
+//    com.example.ralk.model.Food Food;
+
+
+
+    EditText et1, et2, et3, et4;
     //Initialising the variables of buttons
     Button button3,button4,button5;
-    //Initialising the database reference
-    DatabaseReference reff;
-    //Giving the path of the parent class
-    com.example.ralk.model.Food Food;
 
+    ImageView img;
+    String e1,e2;
+    int e3,e5;
+    double e4;
+    private Context context;
+    private String[] cameraPermisiion;
+    private String[] storagePermssion;
 
-    //On create function
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pm_three);
-
-        //Assining the values to the variables
-        getCount();
-        //Text fields
-        ProductManagerAddItem_name_of_the_food=(EditText)findViewById(R.id.ProductManagerAddItem_name_of_the_food);
-        ProductManagerAddItem_menu_ID=(EditText) findViewById(R.id.ProductManagerAddItem_menu_ID);
-        ProductManagerAddItem_Discription=(EditText) findViewById(R.id.ProductManagerAddItem_Discription);
-        ProductManagerAddItem_Prise=(EditText) findViewById(R.id.ProductManagerAddItem_Prise);
-        //Buttons
-        button3=(Button) findViewById(R.id.button3);
-        button4=(Button) findViewById(R.id.button4);
-        button5=(Button) findViewById(R.id.button5);
-
-        Food=new Food();
-
-        reff= FirebaseDatabase.getInstance("https://ralk-ef10e-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference("Food");
+        et1 = findViewById(R.id.ProductManagerAddItem_name_of_the_food);
+        et2 = findViewById(R.id.ProductManagerAddItem_Discription);
+        et3 = findViewById(R.id.ProductManagerAddItem_menu_ID);
+        et4 = findViewById(R.id.ProductManagerAddItem_Prise);
 
 
-        //Function of the button 3
-        //#Enter De
-        button3.setOnClickListener(new View.OnClickListener() {
+        //getting the image
+        img = findViewById(R.id.input_Image);
+        cameraPermisiion =new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE};
+        storagePermssion = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE};
+        img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Auto increment ID
-                String dbid;
-
-
-                if (count==0){
-                    dbid = "1";
-                }else{
-                    dbid = String.valueOf(count+1);
-                }
-                //Entering values to the database
-                int menuId=Integer.parseInt(ProductManagerAddItem_menu_ID.getText().toString());
-                Food.setPrice(ProductManagerAddItem_Prise.getText().toString());
-                Food.setDescription(ProductManagerAddItem_Discription.getText().toString());
-                Food.setName(ProductManagerAddItem_name_of_the_food.getText().toString());
-                Food.setMenuId(menuId);
-
-                // reff.push().setValue(Food);
-                reff.child(dbid).setValue(Food);
-                Toast.makeText(PmThree.this, "data entered", Toast.LENGTH_SHORT).show();
-
-            }
-        });
-
-
-        button4.setOnClickListener(view -> {
-            int menuId=Integer.parseInt(ProductManagerAddItem_menu_ID.getText().toString().trim());
-            Food.setPrice(ProductManagerAddItem_Prise.getText().toString());
-            Food.setDescription(ProductManagerAddItem_Discription.getText().toString());
-            Food.setName(ProductManagerAddItem_name_of_the_food.getText().toString());
-            Food.setMenuId(menuId);
-
-
-        });
-
-        button5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(PmThree.this, PmFour.class));
+                ActivityCompat.requestPermissions(
+                        PmThree.this,
+                        new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
+                        PICK_IMAGE_REQUEST
+                );
             }
         });
     }
 
-    public static long count = 0;
+    public void savenewProduct(View view){
+        e1 = et1.getText().toString();
+        e2 = et2.getText().toString();
+        try {
+            e3 = Integer.parseInt(et3.getText().toString());
+        } catch (NumberFormatException e) {
+            finish();
+            startActivity(getIntent());
+            Toast.makeText(PmThree.this, "Please enter mane id", Toast.LENGTH_SHORT).show();
+        }
+        e4 = Double.parseDouble(et4.getText().toString());
 
-    public void getCount(){
-
-        DatabaseReference readRef = FirebaseDatabase.getInstance("https://ralk-ef10e-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference("Food");
-        readRef.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if (snapshot.exists()){
-                    count = (snapshot.getChildrenCount());
-
-                    Toast.makeText(getApplicationContext(), "Database has "+ count +" values", Toast.LENGTH_LONG).show();
-                } else {
-
-                    Toast.makeText(getApplicationContext(), "No source to display", Toast.LENGTH_SHORT).show();
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//
-//            }
-        });
-
+        byte[] image1 = imageViewToByte(img);
+        DBHelper dbHelper =  new DBHelper(this);
+        Log.d("ei:",String.valueOf(e1));
+        if(e1.isEmpty()){
+            Toast.makeText(this,"Enter Name", Toast.LENGTH_SHORT).show();
+        }else{
+            dbHelper.addProductShop(e1,e2,e3,e4,image1);
+            Toast.makeText(PmThree.this, "Saved successfully", Toast.LENGTH_SHORT).show();
+        }
     }
+
+
+    public static byte[] imageViewToByte(ImageView image) {
+        Bitmap bitmap = ((BitmapDrawable) image.getDrawable()).getBitmap();
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
+        byte[] byteArray = stream.toByteArray();
+        return byteArray;
+    }
+
+
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        if (requestCode == PICK_IMAGE_REQUEST) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                //gallery intent
+                Intent gallertIntent = new Intent(Intent.ACTION_GET_CONTENT);
+                gallertIntent.setType("image/*");
+                startActivityForResult(gallertIntent, PICK_IMAGE_REQUEST);
+            } else {
+            }
+            return;
+        }
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+
+        if(requestCode==PICK_IMAGE_REQUEST && resultCode ==RESULT_OK){
+            Uri imageUri = data.getData();
+            CropImage.activity(imageUri)
+                    .setGuidelines(CropImageView.Guidelines.ON)
+                    .setAspectRatio(1,1)
+                    .start(this);
+        }
+        if(requestCode== CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE){
+            CropImage.ActivityResult result = CropImage.getActivityResult(data);
+            if(resultCode ==RESULT_OK){
+                Uri resultUri = result.getUri();
+                //set image choose from gallery to image view
+                img.setImageURI(resultUri);
+            }else if(requestCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE){
+                Exception error = result.getError();
+            }
+        }
+
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
 }
