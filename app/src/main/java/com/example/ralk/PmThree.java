@@ -134,7 +134,7 @@ public class PmThree extends AppCompatActivity {
             Uri imageUri = data.getData();
             CropImage.activity(imageUri)
                     .setGuidelines(CropImageView.Guidelines.ON)
-                    .setAspectRatio(1,1)
+                    .setAspectRatio(2,1)
                     .start(this);
         }
         if(requestCode== CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE){
@@ -149,6 +149,9 @@ public class PmThree extends AppCompatActivity {
         }
 
         super.onActivityResult(requestCode, resultCode, data);
+    }
+    public void next(View v) {
+        startActivity(new Intent(PmThree.this, PmFour.class));
     }
 
 }
