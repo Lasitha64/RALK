@@ -11,14 +11,12 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
@@ -43,8 +41,6 @@ public class PmThree extends AppCompatActivity {
 
 
     EditText et1, et2, et3, et4;
-    //Initialising the variables of buttons
-    Button button3,button4,button5;
 
     ImageView img;
     String e1,e2;
@@ -58,6 +54,7 @@ public class PmThree extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pm_three);
+        //Initialize variable
         et1 = findViewById(R.id.ProductManagerAddItem_name_of_the_food);
         et2 = findViewById(R.id.ProductManagerAddItem_Discription);
         et3 = findViewById(R.id.ProductManagerAddItem_menu_ID);
@@ -104,6 +101,7 @@ public class PmThree extends AppCompatActivity {
     }
 
 
+    //Converting the image
     public static byte[] imageViewToByte(ImageView image) {
         Bitmap bitmap = ((BitmapDrawable) image.getDrawable()).getBitmap();
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
@@ -127,6 +125,9 @@ public class PmThree extends AppCompatActivity {
             return;
         }
     }
+
+
+    //Crop the image
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
 
@@ -150,6 +151,8 @@ public class PmThree extends AppCompatActivity {
 
         super.onActivityResult(requestCode, resultCode, data);
     }
+
+    /*next button*/
     public void next(View v) {
         startActivity(new Intent(PmThree.this, PmFour.class));
     }

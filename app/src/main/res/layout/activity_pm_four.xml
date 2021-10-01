@@ -10,11 +10,11 @@
         android:id="@+id/imageView2"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/input_Image"
-        app:layout_constraintEnd_toStartOf="@+id/input_Image"
+        android:layout_marginTop="68dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/input_Image"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ralklogo" />
 
     <TextView
@@ -22,7 +22,7 @@
         android:layout_width="244dp"
         android:layout_height="45dp"
         android:layout_marginStart="131dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="132dp"
         android:text="Enter food item"
         android:textAlignment="center"
@@ -31,7 +31,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/input_Image" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <EditText
         android:id="@+id/ProductManagerAddItem_name_of_the_food"
@@ -102,6 +102,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
+        android:layout_marginBottom="40dp"
         android:ems="10"
         android:hint="Enter Price"
         android:inputType="number|numberDecimal"
@@ -147,15 +148,5 @@
         app:layout_constraintStart_toEndOf="@+id/button4"
         app:layout_constraintTop_toTopOf="@+id/button4"
         app:layout_constraintVertical_bias="0.0" />
-
-    <ImageView
-        android:id="@+id/input_Image"
-        android:layout_width="269dp"
-        android:layout_height="140dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/add_new_image" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
