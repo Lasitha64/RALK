@@ -67,7 +67,7 @@ public class food_list extends AppCompatActivity {
                 .setQuery(query,Food.class)
                 .build();
 
-        System.out.println(options);
+        System.out.println("===============================>>>>"+options);
         // Connecting object of required Adapter class to
         // the Adapter class itself
         adapter = new FoodAdapter(options);

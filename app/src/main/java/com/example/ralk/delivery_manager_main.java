@@ -30,6 +30,7 @@ public class delivery_manager_main extends AppCompatActivity {
     DatabaseReference reff;
     Deliverylist deliverylist;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate((savedInstanceState));
@@ -64,7 +65,7 @@ public class delivery_manager_main extends AppCompatActivity {
                 deliverylist.setOrderno(orderNo);
 
                // reff.push().setValue(deliverylist);
-                reff.child(dbid).setValue(deliverylist);
+              
                 Toast.makeText(delivery_manager_main.this, "Data Entry Successfull", Toast.LENGTH_SHORT).show();
 
             }
@@ -86,6 +87,10 @@ public class delivery_manager_main extends AppCompatActivity {
         btViewList.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
+
+              //  reff.child(dbid).setValue(deliverylist);
+                reff.child("deliverylist").setValue(deliverylist);
+                System.out.println ("=============================>"+deliverylist);
 
                 Intent viewListIntent = new Intent(delivery_manager_main.this,
                         Delivery_manager_retrive.class);
