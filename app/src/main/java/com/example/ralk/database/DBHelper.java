@@ -79,7 +79,10 @@ public class DBHelper extends SQLiteOpenHelper {
         //problem
         if (cursor.moveToFirst()) {
             do {
-                products.add(cursor.getString(0));
+                products.add(cursor.getString(1));
+                products.add(cursor.getString(2));
+                products.add(cursor.getString(3));
+                products.add(cursor.getString(4));
 
             } while (cursor.moveToNext());
         }
