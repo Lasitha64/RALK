@@ -65,7 +65,7 @@ public class delivery_manager_main extends AppCompatActivity {
 
                // reff.push().setValue(deliverylist);
                 reff.child(dbid).setValue(deliverylist);
-                Toast.makeText(delivery_manager_main.this, "data paka", Toast.LENGTH_SHORT).show();
+                Toast.makeText(delivery_manager_main.this, "Data Entry Successfull", Toast.LENGTH_SHORT).show();
 
             }
         });
