@@ -5,7 +5,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class Common {
 
-    public static FirebaseUser currentUser;
+    public static User currentUser;
     public static final String UPDATE = "Update";
     public static final String Delete = "Delete";
 }

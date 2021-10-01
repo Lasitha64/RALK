@@ -131,12 +131,12 @@ public class cart extends AppCompatActivity {
 
         alertDialog.setPositiveButton("YES", new DialogInterface.OnClickListener() {
 
-            Common common = new Common();
+
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 Request request = new Request(
-                        user.getDisplayName(),
-                        user.getPhoneNumber(),
+                        Common.currentUser.getPhone(),
+                        Common.currentUser.getName(),
                         edtAddress.getText().toString(),
                         txtTotalPrice.getText().toString(),
                         cart
@@ -172,7 +172,7 @@ public class cart extends AppCompatActivity {
 
         for(Order order:cart)
             total+=(Integer.parseInt(order.getPrice()))*(Integer.parseInt(order.getQuantity()));
-        Locale locale = new Locale("ind","RS");
+        Locale locale = new Locale("en","LK");
         NumberFormat fmt = NumberFormat.getCurrencyInstance(locale);
 
         txtTotalPrice.setText(fmt.format(total));

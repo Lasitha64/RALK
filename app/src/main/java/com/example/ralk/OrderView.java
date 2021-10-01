@@ -1,6 +1,8 @@
 package com.example.ralk;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -9,59 +11,57 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.ralk.adapter.FoodAdapter;
 import com.example.ralk.adapter.OrderAdapter;
 import com.example.ralk.common.Common;
+import com.example.ralk.model.Food;
 import com.example.ralk.model.Request;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 
 public class OrderView extends AppCompatActivity {
 
     public RecyclerView recyclerView;
-    public RecyclerView.LayoutManager layoutManager;
 
-    FirebaseRecyclerAdapter<Request, OrderAdapter> adapter;
 
-    FirebaseDatabase database;
-    DatabaseReference ref;
-    Common com;
+
+
+
+    DatabaseReference mbase;
+    OrderAdapter adapter;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.order_status);
 
-        database = FirebaseDatabase.getInstance("https://ralk-ef10e-default-rtdb.asia-southeast1.firebasedatabase.app/");
-        ref = database.getReference("Requests");
+        mbase = FirebaseDatabase.getInstance("https://ralk-ef10e-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference("Requests");
 
-        recyclerView = (RecyclerView) findViewById(R.id.listOrders);
-        recyclerView.setHasFixedSize(true);
-        layoutManager = new LinearLayoutManager(this);
 
-    //    loadOrders(com.getPhone());
+        RecyclerView recyclerView = findViewById(R.id.listOrders);
+
+        recyclerView.setLayoutManager(
+                new LinearLayoutManager(this));
+
+      //  String phone = Common.currentUser.getPhone();
+
+     //   System.out.println("phone");
+     //   Query query = ref.orderByChild("phone").equalTo(phone);
+
+        FirebaseRecyclerOptions<Request> options
+                = new FirebaseRecyclerOptions.Builder<Request>()
+                .setQuery(mbase,Request.class)
+                .build();
+
+        adapter = new OrderAdapter(options);
+        recyclerView.setAdapter(adapter);
+
 
     }
 
-//    private void loadOrders(String phone) {
-//        adapter = new FirebaseRecyclerAdapter<Request, OrderAdapter>(
-//                Request.class,
-//                R.layout.order_status,
-//                OrderAdapter.class,
-//                ref.orderByChild("phone")
-//                .equalTo(phone)
-////        )
-//        {
-//            @Override
-//            protected void onBindViewHolder(@NonNull OrderAdapter holder, int position, @NonNull Request model) {
-//
-//            }
-//
-//            @NonNull
-//            @Override
-//            public OrderAdapter onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-//                return null;
-//            }
-//        }
-   // }
+
 }

@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         logindp = findViewById(R.id.btn_logdp);
         logincus = findViewById(R.id.btn_logcus);
         signup = findViewById(R.id.btn_signup);
-        logindp = findViewById(R.id.btn_logdp);
+        loginp = findViewById(R.id.btn_logpm);
         loginad = findViewById(R.id.btn_logAdmin);
 
         logindp.setOnClickListener(new View.OnClickListener() {
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        loginad.setOnClickListener(new View.OnClickListener() {
+        loginp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, adminMain.class));

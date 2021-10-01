@@ -20,6 +20,11 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class activity_customer_login extends AppCompatActivity {
 
@@ -28,6 +33,8 @@ public class activity_customer_login extends AppCompatActivity {
     FirebaseAuth fAuth;
     FirebaseUser user;
     ProgressBar pbar;
+    String userID;
+    DatabaseReference referrence;
 
 
 
@@ -81,6 +88,23 @@ public class activity_customer_login extends AppCompatActivity {
                         if (task.isSuccessful()) {
 
                             user = FirebaseAuth.getInstance().getCurrentUser();
+                            referrence = FirebaseDatabase.getInstance("https://ralk-ef10e-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference("Users");
+                            userID = user.getUid();
+
+                            referrence.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                    User userp = snapshot.getValue(User.class);
+                                    if(userp != null){
+                                        Common.currentUser =userp;
+                                    }
+                                }
+
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError error) {
+
+                                }
+                            });
 
 
                             Toast.makeText(activity_customer_login.this, "Logged in Successfully", Toast.LENGTH_SHORT).show();
