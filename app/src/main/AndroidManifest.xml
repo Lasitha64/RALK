@@ -20,11 +20,14 @@
         <activity android:name=".cus.activity_customer_login" />
         <activity android:name=".adminlogin" />
         <activity android:name=".admin" />
-        <activity android:name=".aorder"/>
+        <activity android:name=".apayments" />
+        <activity android:name=".deliveryAdapter"
+            tools:ignore="Instantiatable" />
+
         <activity android:name=".add_delivery"/>
         <activity android:name=".delivery"/>
         <activity android:name=".empDetails"/>
-        <activity android:name=".model.updateDelivery"/>
+        <activity android:name=".updateDelivery"/>
 
 
         <activity android:name=".aorderadapter"

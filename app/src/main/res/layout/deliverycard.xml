@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
-    app:cardBackgroundColor="#A8D1E4">
+    android:layout_height="180dp"
+    app:cardBackgroundColor="#E38487">
 
     <LinearLayout
         android:layout_width="412dp"
         android:layout_height="174dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="30dp"
         android:orientation="vertical"
 
         app:layout_constraintTop_toTopOf="parent">
@@ -26,7 +27,8 @@
                 android:text="@string/order_id"
                 android:textColor="@color/black"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:text="DP ID" />
 
             <TextView
 
@@ -34,7 +36,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="O001"
+                android:text="DP001"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -49,7 +51,7 @@
                 android:layout_width="71dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Customer Name :"
+                android:text=" Name :"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -71,10 +73,10 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="71dp"
+                android:layout_width="139dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Address :"
+                android:text="Email :"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -84,7 +86,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Malabe"
+                android:text="adi@gmail.com"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
         </LinearLayout>
@@ -113,31 +115,7 @@
                 android:textSize="18sp" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="41dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="Price :"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/p"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="800"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-        </LinearLayout>
 
     </LinearLayout>
-
-
 </androidx.cardview.widget.CardView>
+

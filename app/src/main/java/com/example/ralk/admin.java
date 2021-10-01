@@ -2,64 +2,62 @@ package com.example.ralk;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.annotation.NonNull;
+
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.ralk.cus.activity_customer_login;
-import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+
+import com.google.firebase.firestore.DocumentChange;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.QuerySnapshot;
+
 
 import java.util.ArrayList;
 
 public class admin extends AppCompatActivity {
 
-    Button button4;
+    Button button4,button3;
 
 
 
-    RecyclerView recycle_View;
-
-    DatabaseReference database;
-
-    aorderadapter aorderadapter;
-
+    RecyclerView recyclerView;
     ArrayList<aorder> list;
+    aorderadapter aorderadapter;
+    FirebaseFirestore db;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.admin);
 
+        list=new ArrayList<aorder>();
+        aorderadapter=new aorderadapter(admin.this,list);
+
+
+        recyclerView = findViewById(R.id.recycle);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(aorderadapter);
+
+        db=FirebaseFirestore.getInstance();
+
+
+
+        eventChangeListner();
+
+
         button4 = findViewById(R.id.button4);
-
-        recycle_View = (RecyclerView) findViewById(R.id.recycle_View);
-        database = FirebaseDatabase.getInstance("https://ralk-ef10e-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference("Orders");
-
-        // To display the Recycler view linearly
-        recycle_View.setLayoutManager(
-                new LinearLayoutManager(this));
-
-        // It is a class provide by the FirebaseUI to make a
-        // query in the database to fetch appropriate data
-        FirebaseRecyclerOptions<aorder> options
-                = new FirebaseRecyclerOptions.Builder<aorder>()
-                .setQuery(database, aorder.class)
-                .build();
-        // Connecting object of required Adapter class to
-        // the Adapter class itself
-        aorderadapter = new aorderadapter(options);
-        // Connecting Adapter class with the Recycler view*/
-        recycle_View.setAdapter(aorderadapter);
-
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -67,25 +65,44 @@ public class admin extends AppCompatActivity {
             }
         });
 
+        button3 = findViewById(R.id.button3);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(admin.this, apayments.class));
+            }
+        });
+
     }
-        @Override
-        protected void onStart()
 
-        {
-            super.onStart();
-            aorderadapter.startListening();
-        }
+    private void eventChangeListner() {
 
-        // Function to tell the app to stop getting
-        // data from database on stoping of the activity
-        @Override protected void onStop()
-        {
-            super.onStop();
-            aorderadapter.stopListening();
-        }
+        db.collection("Orders").orderBy("orderID", Query.Direction.ASCENDING)
+                .addSnapshotListener(new EventListener<QuerySnapshot>() {
+                    @Override
+                    public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
+
+                        if(error!=null){
+                            Log.e("Firestore error",error.getMessage());
+                            return;
+
+                        }
+                        for(DocumentChange dc:value.getDocumentChanges()){
+
+                            if(dc.getType()==DocumentChange.Type.ADDED){
+
+                                list.add(dc.getDocument().toObject(aorder.class));
+                            }
+                            aorderadapter.notifyDataSetChanged();
+                        }
+
+                    }
+                });
+
+    }
 
 
-        }
+}
 
 
 

@@ -1,152 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#FFC0C1C3">
 
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="411dp"
+        android:layout_height="59dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.033">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Orders"
+            android:textColor="#CFD8DC"
+            android:textSize="14sp"
+            app:backgroundTint="#B80015" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#3A3838"
+            android:text="Payments"
+            android:textColor="#CFD8DC"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Employee Details"
+            android:textColor="#CFD8DC"
+            android:textSize="14sp"
+            app:backgroundTint="#3A3838" />
+    </LinearLayout>
+
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageView3"
         android:layout_width="164dp"
         android:layout_height="130dp"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:contentDescription="TODO"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        android:layout_marginStart="111dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="136dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/photo_1628705756212_jpg_auto_x2_591e9426_fad1_11eb_a561_16225aa77860" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="163dp"
-        android:text="@string/admin"
-        android:textColor="#000000"
+        android:text="Admin"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#000000"
         android:textSize="40sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="110dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="91dp"
-        android:layout_marginEnd="1dp"
-        android:text="@string/orders"
-        android:textColor="#CFD8DC"
-        app:backgroundTint="#B80015"
-        app:layout_constraintEnd_toStartOf="@+id/button3"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle"
+        android:layout_width="404dp"
+        android:layout_height="440dp"
+        android:layout_marginTop="14dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="126dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="24dp"
-        android:text="@string/payments"
-        android:textColor="#CFD8DC"
-        app:backgroundTint="#353535"
-        app:layout_constraintEnd_toStartOf="@+id/button4"
-        app:layout_constraintStart_toEndOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="190dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="24dp"
-        android:text="@string/employee_details"
-        android:textColor="#CFD8DC"
-        app:backgroundTint="#3A3838"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/button3"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <TableLayout
-        android:id="@+id/tableLayout"
-        android:layout_width="408dp"
-        android:layout_height="443dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="1dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        tools:ignore="ExtraText">
-        android:stretchColumns="1,2,3,4"
-        android:layout_margin="8dp">
-
-
-        <TableRow android:layout_height="394dp">
-
-            <TextView
-
-                android:layout_width="wrap_content"
-
-                android:padding="10dp"
-                android:text="@string/orderid"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <TextView
-
-                android:layout_width="106dp"
-
-                android:padding="10dp"
-                android:text="@string/cusname"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <TextView
-
-                android:layout_width="wrap_content"
-
-                android:padding="10dp"
-                android:text="@string/address"
-                android:textSize="16dp"
-                android:textStyle="bold" />
-
-            <TextView
-
-                android:layout_width="69dp"
-
-                android:padding="10dp"
-                android:text="@string/Price"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <TextView
-
-                android:layout_width="89dp"
-
-                android:padding="10dp"
-                android:text="@string/dp_id"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-
-
-
-        </TableRow>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycle_View"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-
-    </TableLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

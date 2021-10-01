@@ -4,40 +4,59 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class aorder  {
 
-    String cusname,address,p,dp;
+    String orderID,CusName,Address;
+    long Mobile,Price;
 
-    public String getCusname() {
-        return cusname;
-    }
-    public String getAdd() {
-        return address;
-    }
-    public String getP() {
-        return p;
-    }
-    public String getDp() {
-        return dp;
+
+    public aorder(){
+
     }
 
-    public void setCusname(String cusname) {
-        this.cusname = cusname;
+    public aorder(String orderId, String cusName, String address, long mobile, long price) {
+        orderID = orderId;
+        CusName = cusName;
+        Address = address;
+        Mobile = mobile;
+        Price = price;
     }
+
+    public String getOrderId() {
+        return orderID;
+    }
+
+    public void setOrderId(String orderId) {
+        orderId = orderId;
+    }
+
+    public String getCusName() {
+        return CusName;
+    }
+
+    public void setCusName(String cusName) {
+        CusName = cusName;
+    }
+
+    public String getAddress() {
+        return Address;
+    }
+
     public void setAddress(String address) {
-        this.address = address;
-    }
-    public void setP(String p) {
-        this.p = p;
-    }
-    public void setDp(String dp) {
-        this.dp = dp;
-    }
-    public aorder( String cusname, String address, String p, String dp) {
-        this.cusname = cusname;
-        this.address = address;
-        this.p = p;
-        this.dp = dp;
+        Address = address;
     }
 
-    public aorder() {
+    public long getMobile() {
+        return Mobile;
+    }
+
+    public void setMobile(long mobile) {
+        Mobile = mobile;
+    }
+
+    public long getPrice() {
+        return Price;
+    }
+
+    public void setPrice(long price) {
+        Price = price;
     }
 }
