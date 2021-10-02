@@ -23,7 +23,7 @@ import java.util.HashMap;
 
 public class updateDelivery extends AppCompatActivity {
 
-    Button button41;
+    Button button41,button12;
     private EditText un, ue, um, udpid;
     private FirebaseFirestore db;
     private Object OnCompleteListener;
@@ -39,6 +39,9 @@ public class updateDelivery extends AppCompatActivity {
 
         db = FirebaseFirestore.getInstance();
         button41 = findViewById(R.id.button41);
+        button12 = findViewById(R.id.button12);
+
+
         button41.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,6 +54,53 @@ public class updateDelivery extends AppCompatActivity {
             }
 
         });
+
+        button12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String DP_ID = udpid.getText().toString();
+                udpid.setText("");
+                deleteData(DP_ID);
+            }
+
+        });
+    }
+
+    private void deleteData(String DP_ID) {
+
+        db.collection("Delivery Partners").whereEqualTo("DP_ID",DP_ID  )
+                .get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if (task.isSuccessful() && !task.getResult().isEmpty()) {
+
+                    DocumentSnapshot documentSnapshot = task.getResult().getDocuments().get(0);
+                    String documentID = documentSnapshot.getId();
+                    db.collection("Delivery Partners")
+                            .document(documentID)
+                            .delete()
+                            .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void unused) {
+                                    Toast.makeText(updateDelivery.this, " Deleted !!", Toast.LENGTH_SHORT).show();
+                                }
+                            }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(updateDelivery.this, "Data not Deleted !!", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+
+                } else {
+                    Toast.makeText(updateDelivery.this, "Failed", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+
+        });
+
+
     }
 
     private void updateData(String DP_ID, String Name, String Email, String Mobile) {
